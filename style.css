@@ -1,17 +1,29 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Night sky background */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: white;
+    margin: 0;
 }
 
 #calculator {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for calculator */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center; /* Center align content */
 }
 
 input[type="text"] {
@@ -24,6 +36,7 @@ input[type="text"] {
     text-align: right;
 }
 
+/* Calculator button styles */
 button {
     width: 22%;
     padding: 10px;
@@ -32,22 +45,26 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #6c757d; /* Gray */
     color: white;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #5a6268;
 }
 
-#history {
+/* History section styles */
+#history-container {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
+    max-height: 150px; /* Set max height for the container */
+    overflow-y: auto;  /* Add vertical scroll */
 }
 
 #history p {
     margin: 0;
     padding: 5px 0;
     font-size: 14px;
+    color: #ccc; /* Light gray color for history text */
 }

@@ -1,3 +1,4 @@
+// Calculator logic
 let history = [];
 
 function clearResult() {
